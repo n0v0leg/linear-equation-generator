@@ -76,4 +76,3 @@ for (i=0; i<n; i++) {
 	}
 	console.log(s);
 }
-console.log('\n');
