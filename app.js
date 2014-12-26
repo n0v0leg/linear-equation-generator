@@ -1,11 +1,11 @@
 function randomIntInc (low, high) {
-  return Math.floor(Math.random() * (high - low + 1) + low);
+	return Math.floor(Math.random() * (high - low + 1) + low);
 }
 
-var i,j;
+var i, j;
 var n = 3;
-var l = -4;
-var h = +4;
+var l = -4;//low
+var h = +4;//high
 
 function CreateLinearEquation(){
 var matrix = [];
@@ -36,7 +36,7 @@ function MultiplyRowByNumber(row, num){
 }
 
 do {
-	numOfZ = 0;
+	numberOfZeros = 0;
 	var f1 = randomIntInc(0,n-1);
 	var f2 = randomIntInc(0,n-1);
 	while (f1 == f2) {f2 = randomIntInc(0,n-1);}
@@ -47,16 +47,16 @@ do {
 	for (i=0; i<n; i++) {
 		for (j=0; j<n; j++){
 			if (matrix[i][j] == 0){
-				numOfZ++;
+				numberOfZeros++;
 			}
 		}
 	}
-} while (numOfZ > 1);
+} while (numberOfZeros > 1);
 
 for (i=0; i<n; i++) {
 	for (j=0; j<n; j++){
 		if (Math.abs(matrix[i][j]) > 4){
-			return 0;
+			return 0;//not satisfied with equation
 		}
 	}
 }
