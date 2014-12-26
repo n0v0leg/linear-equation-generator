@@ -7,7 +7,7 @@ var n = 3;
 var l = -4;//low
 var h = +4;//high
 
-function CreateLinearEquation(){
+function CreateLinearEquations(){
 var matrix = [];
 for (i=0; i<n; i++) {
 	matrix[i]=[];
@@ -56,16 +56,16 @@ do {
 for (i=0; i<n; i++) {
 	for (j=0; j<n; j++){
 		if (Math.abs(matrix[i][j]) > 4){
-			return 0;//not satisfied with equation
+			return 0;//not satisfied with equations
 		}
 	}
 }
 return matrix;
 }
 
-m = CreateLinearEquation();
+m = CreateLinearEquations();
 while (m == 0) {
-	m = CreateLinearEquation();
+	m = CreateLinearEquations();
 }
 
 var s;
